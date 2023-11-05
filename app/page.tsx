@@ -1,3 +1,11 @@
-export default function Home() {
-  return <main className="bg-black">Hello world:</main>;
-}
+import Avatar from '@/components/Avatar';
+
+const Home = () => {
+  return (
+    <main className="bg-black">
+      <Avatar size={100} src="" alt="avatar test" />
+    </main>
+  );
+};
+
+export default Home;
