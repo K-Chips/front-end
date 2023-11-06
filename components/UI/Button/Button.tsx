@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, forwardRef, ReactNode } from 'react';
+import { ButtonHTMLAttributes, forwardRef } from 'react';
 
 import { cn } from '@/utils/cn';
 
@@ -8,11 +8,14 @@ import { Size, Variant } from './types';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size;
   variant?: Variant;
-  children?: ReactNode;
+  text?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, className, size, variant, ...props }: ButtonProps, ref) => {
+  (
+    { children, className, size, variant, text, ...props }: ButtonProps,
+    ref,
+  ) => {
     const patternedSize = sizePattern(size);
     const patternedVariant = variantPattern(variant);
 
@@ -22,6 +25,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(patternedSize, patternedVariant, className)}
         {...props}
       >
+        {text}
         {children}
       </button>
     );
