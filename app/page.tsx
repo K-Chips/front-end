@@ -5,7 +5,8 @@ const Home = () => {
     <main>
       <Grid justify="center" align="center" className="grid-rows-3 grid-cols-2">
         <Button size="small" variant="secondary" text="Login" />
-        <Avatar size="2xl" src="" alt="avatar test" />
+        <Avatar size="4xl" src="" alt="avatar test" />
+        <Avatar size="md" src="" alt="avatar test" />
         <Input />
         <PopularList />
       </Grid>

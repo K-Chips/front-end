@@ -1,17 +1,18 @@
 import Image, { StaticImageData } from 'next/image';
+import { HTMLAttributes } from 'react';
 
+import DefaultImg from '@/public/images/default-avatar-img.png';
 import { cn } from '@/utils';
 
 type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
 
-interface AvatarProps {
+interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
   size: AvatarSize;
   src?: StaticImageData | string;
   alt: string;
 }
 
-const Avatar = ({ size, src, alt }: AvatarProps) => {
-  const DefaultAvatarImg = '/next.svg';
+const Avatar = ({ size, src, alt, className, ...props }: AvatarProps) => {
   const sizeVariants: { [key in AvatarSize]: string } = {
     xs: 'w-[12px] h-[12px]',
     sm: 'w-[16px] h-[16px]',
@@ -28,10 +29,12 @@ const Avatar = ({ size, src, alt }: AvatarProps) => {
       className={cn(
         `relative overflow-hidden bg-white rounded-full`,
         sizeVariants[size],
+        className,
       )}
+      {...props}
     >
       <Image
-        src={src || DefaultAvatarImg}
+        src={src || DefaultImg}
         alt={alt}
         fill
         className="object-cover aspect-square"
