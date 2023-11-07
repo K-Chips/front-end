@@ -1,9 +1,15 @@
-import React, { PropsWithChildren } from 'react';
+import { HTMLAttributes } from 'react';
 
-interface FlexProps extends PropsWithChildren {}
+import { cn } from '@/utils';
 
-const Flex = ({ children }: FlexProps) => {
-  return <div className="flex">{children}</div>;
+interface FlexProps extends HTMLAttributes<HTMLDivElement> {}
+
+const Flex = ({ className, children, ...props }: FlexProps) => {
+  return (
+    <div className={cn(`flex flex-row`, className)} {...props}>
+      {children}
+    </div>
+  );
 };
 
 export default Flex;
