@@ -1,7 +1,9 @@
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button/Button';
-export { default as Flex } from './Flex';
 export { default as Input } from './Input';
+export { default as Column } from './Layouts/Column';
+export { default as Flex } from './Layouts/Flex';
+export { default as Gird } from './Layouts/Gird';
 export { default as List } from './List';
 export { default as ListItem } from './ListItem';
 export { default as Select } from './Select';
