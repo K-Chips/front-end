@@ -1,5 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 
+import { cn } from '@/utils';
+
 type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
 
 interface AvatarProps {
@@ -23,14 +25,16 @@ const Avatar = ({ size, src, alt }: AvatarProps) => {
 
   return (
     <div
-      className={`relative ${sizeVariants[size]} overflow-hidden bg-white rounded-full`}
+      className={cn(
+        `relative overflow-hidden bg-white rounded-full`,
+        sizeVariants[size],
+      )}
     >
       <Image
         src={src || DefaultAvatarImg}
         alt={alt}
-        width={80}
-        height={80}
-        className="absolute object-cover aspect-square"
+        fill
+        className="object-cover aspect-square"
       />
     </div>
   );

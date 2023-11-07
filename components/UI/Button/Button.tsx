@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, forwardRef } from 'react';
 
-import { cn } from '@/utils/cn';
+import { cn } from '@/utils';
 
 import { sizePattern, variantPattern } from './styles';
 import { Size, Variant } from './types';
