@@ -1,5 +1,4 @@
-import Button from './UI/Button/Button';
-import List from './UI/List';
+import { Button, List } from '@/components';
 
 const PopularList = () => {
   const popularPost = [

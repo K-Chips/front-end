@@ -1,7 +1,4 @@
-import { Avatar } from '@/components';
-import PopularList from '@/components/PopularList';
-import Button from '@/components/UI/Button/Button';
-import Input from '@/components/UI/Input';
+import { Avatar, Button, Input, PopularList } from '@/components';
 
 const Home = () => {
   return (
