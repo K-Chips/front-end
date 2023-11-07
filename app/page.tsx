@@ -1,9 +1,9 @@
-import Avatar from '@/components/Avatar';
+import { Avatar } from '@/components';
 
 const Home = () => {
   return (
-    <main className="bg-black">
-      <Avatar size={100} src="" alt="avatar test" />
+    <main>
+      <Avatar size="md" src="" alt="avatar test" />
     </main>
   );
 };
