@@ -8,3 +8,4 @@ export { default as List } from './List';
 export { default as ListItem } from './ListItem';
 export { default as Select } from './Select';
 export { default as SelectItem } from './SelectItem';
+export { default as Typography } from './typography/Typography';
