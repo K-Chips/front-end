@@ -1,11 +1,8 @@
 import { HTMLAttributes } from 'react';
 
-import {
-  getAlignClass,
-  getJustifyClass,
-  LayoutBasicProps,
-} from '@/components/UI/Layouts/styles';
 import { cn } from '@/utils';
+
+import { getAlignClass, getJustifyClass, LayoutBasicProps } from './styles';
 
 interface ColumnProps
   extends LayoutBasicProps,
