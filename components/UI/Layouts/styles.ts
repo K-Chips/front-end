@@ -24,5 +24,3 @@ export const justifyStyles: { [key in Justify]: string } = {
 
 export const getAlignClass = (align: Align) => alignStyles[align];
 export const getJustifyClass = (justify: Justify) => justifyStyles[justify];
-
-export const getGapClass = (gap: string) => `gap-[${gap}]`;
