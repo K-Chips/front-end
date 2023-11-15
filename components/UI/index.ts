@@ -6,5 +6,5 @@ export { default as Flex } from './layouts/Flex';
 export { default as Grid } from './layouts/Grid';
 export { default as List } from './List';
 export { default as ListItem } from './ListItem';
-export { default as Select } from './Select';
+export { default as Select } from './Select/Select';
 export { default as SelectItem } from './SelectItem';
