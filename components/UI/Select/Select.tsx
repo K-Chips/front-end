@@ -1,7 +1,6 @@
 import { cn } from '@/utils';
 
-import { useSelect } from './hooks/useSelect';
-import { useSelectOptions } from './hooks/useSelectOptions';
+import { useSelect, useSelectOptions } from './hooks';
 import { UseSelectOptionsParams, UseSelectParams } from './type';
 
 interface SelectProps {
@@ -14,9 +13,11 @@ const Select = <Option,>({
   options,
   onChange,
   getLabel,
+  keyExtractor,
 }: UseSelectParams<Option> & UseSelectOptionsParams<Option> & SelectProps) => {
   const selectProps = useSelect({ selectedOption, options, onChange });
-  const selectOptions = useSelectOptions({ options, getLabel });
+
+  const selectOptions = useSelectOptions({ options, getLabel, keyExtractor });
 
   return (
     <select {...selectProps} className={cn(`flex flex-col`, className)}>
