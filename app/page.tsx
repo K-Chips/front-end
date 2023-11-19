@@ -1,4 +1,11 @@
-import { Avatar, Button, Grid, Input, PopularList } from '@/components';
+import {
+  Avatar,
+  Button,
+  Grid,
+  Input,
+  PopularList,
+  Typography,
+} from '@/components';
 
 const Home = () => {
   return (
@@ -9,6 +16,8 @@ const Home = () => {
         <Avatar size="md" src="" alt="avatar test" />
         <Input />
         <PopularList />
+        <Typography variant="h1">title</Typography>
+        <Typography variant="p1">description</Typography>
       </Grid>
     </main>
   );
